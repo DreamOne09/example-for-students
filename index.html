@@ -104,7 +104,7 @@
         <section class="contact-section">
             <div class="container">
                 <h3>聯絡我</h3>
-                <form class="contact-form">
+                <form class="contact-form" action="https://formspree.io/f/xpwnqjqk" method="POST">
                     <div class="form-group">
                         <label for="name">姓名：</label>
                         <input type="text" id="name" name="name" required>
@@ -124,8 +124,12 @@
                     </div>
                     <div class="form-group">
                         <label for="message">訊息：</label>
-                        <textarea id="message" name="message" rows="5" placeholder="請輸入您的訊息..."></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="請輸入您的訊息..." required></textarea>
                     </div>
+                    <!-- 隱藏欄位，指定收件者 -->
+                    <input type="hidden" name="_to" value="b1993614@gmail.com">
+                    <input type="hidden" name="_subject" value="來自學生練習網站的訊息">
+                    <input type="hidden" name="_cc" value="b1993614@gmail.com">
                     <button type="submit" class="submit-btn">送出訊息</button>
                 </form>
             </div>
@@ -138,5 +142,36 @@
             <p>&copy; 2024 小明. 版權所有.</p>
         </div>
     </footer>
+
+    <script>
+        // 表單提交處理
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // 顯示載入狀態
+            submitBtn.textContent = '正在送出...';
+            submitBtn.disabled = true;
+            
+            // 如果表單提交成功，會跳轉到 Formspree 的成功頁面
+            // 如果失敗，會顯示錯誤訊息
+        });
+        
+        // 表單驗證
+        document.querySelector('.contact-form').addEventListener('input', function(e) {
+            const form = e.target.closest('form');
+            const submitBtn = form.querySelector('.submit-btn');
+            const requiredFields = form.querySelectorAll('[required]');
+            let allValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    allValid = false;
+                }
+            });
+            
+            submitBtn.disabled = !allValid;
+        });
+    </script>
 </body>
 </html>
