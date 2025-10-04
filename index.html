@@ -1,60 +1,99 @@
 <!DOCTYPE html>
+<!-- 這是 HTML5 的標準文件類型宣告 -->
 <html lang="zh-TW">
+<!-- 設定網頁語言為繁體中文 -->
+
 <head>
+    <!-- 網頁的頭部區域，包含網頁的基本資訊 -->
     <meta charset="UTF-8">
+    <!-- 設定字元編碼為 UTF-8，支援中文顯示 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 響應式設計的 viewport 設定，讓網頁在手機上正常顯示 -->
     <title>自我介紹 - 學生練習網站</title>
+    <!-- 網頁標題，會顯示在瀏覽器分頁上 -->
     <link rel="stylesheet" href="styles.css">
+    <!-- 連結外部 CSS 樣式檔案 -->
 </head>
+
 <body>
-    <!-- 導航選單 -->
+    <!-- 網頁的主要內容區域 -->
+    <!-- 導航選單區域 -->
     <nav class="navbar">
+        <!-- nav 標籤：語義化標籤，表示導航區域 -->
         <div class="nav-container">
+            <!-- 導航選單的容器，用於控制寬度和置中 -->
             <h1 class="nav-logo">我的網站</h1>
+            <!-- 網站標題，使用 h1 標籤表示最重要的標題 -->
             <ul class="nav-menu">
+                <!-- ul 標籤：無序列表，用來建立導航選單 -->
                 <li><a href="index.html" class="nav-link active">自我介紹</a></li>
+                <!-- li 標籤：列表項目，每個選單項目 -->
+                <!-- a 標籤：超連結，href 指定連結的頁面 -->
+                <!-- class="active" 表示目前所在的頁面 -->
                 <li><a href="school.html" class="nav-link">我的學校</a></li>
                 <li><a href="friends.html" class="nav-link">我的朋友</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 主要內容 -->
+    <!-- 主要內容區域 -->
     <main class="main-content">
-        <!-- 個人資訊區塊 -->
+        <!-- main 標籤：語義化標籤，表示網頁的主要內容 -->
+        
+        <!-- 個人資訊區塊（Hero Section） -->
         <section class="hero-section">
+            <!-- section 標籤：語義化標籤，表示一個內容區塊 -->
             <div class="container">
+                <!-- 容器：控制內容的最大寬度和置中 -->
                 <div class="hero-content">
+                    <!-- 主要內容的容器，使用 Flexbox 佈局 -->
                     <div class="hero-text">
+                        <!-- 文字內容區域 -->
                         <h2>你好，我是小明</h2>
+                        <!-- h2 標籤：二級標題 -->
                         <p class="hero-subtitle">網站開發初學者</p>
+                        <!-- p 標籤：段落，class 用於 CSS 樣式 -->
                         <p class="hero-description">
+                            <!-- 描述文字段落 -->
                             我是一個對程式設計充滿熱情的學生，目前正在學習 HTML 和 CSS。
                             希望有一天能成為優秀的前端工程師！
                         </p>
                     </div>
                     <div class="hero-image">
+                        <!-- 圖片區域 -->
                         <img src="https://via.placeholder.com/300x300/4A90E2/FFFFFF?text=我的照片" alt="我的照片" class="profile-img">
+                        <!-- img 標籤：圖片元素 -->
+                        <!-- src：圖片來源網址 -->
+                        <!-- alt：圖片替代文字，當圖片無法顯示時會顯示此文字 -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 個人資訊卡片 -->
+        <!-- 個人資訊卡片區塊 -->
         <section class="info-section">
+            <!-- 個人資訊的內容區塊 -->
             <div class="container">
                 <h3>個人資訊</h3>
+                <!-- h3 標籤：三級標題 -->
                 <div class="info-grid">
+                    <!-- 使用 CSS Grid 佈局的資訊卡片容器 -->
                     <div class="info-card">
+                        <!-- 單個資訊卡片 -->
                         <h4>基本資料</h4>
+                        <!-- h4 標籤：四級標題 -->
                         <ul class="info-list">
+                            <!-- ul 標籤：無序列表，用來顯示個人資訊 -->
                             <li><strong>姓名：</strong>小明</li>
+                            <!-- li 標籤：列表項目 -->
+                            <!-- strong 標籤：粗體文字，強調重要資訊 -->
                             <li><strong>年齡：</strong>18歲</li>
                             <li><strong>居住地：</strong>台北市</li>
                             <li><strong>興趣：</strong>程式設計、攝影、音樂</li>
                         </ul>
                     </div>
                     <div class="info-card">
+                        <!-- 第二個資訊卡片 -->
                         <h4>聯絡方式</h4>
                         <ul class="info-list">
                             <li><strong>Email：</strong>xiaoming@email.com</li>
@@ -67,20 +106,28 @@
             </div>
         </section>
 
-        <!-- 技能展示 -->
+        <!-- 技能展示區塊 -->
         <section class="skills-section">
+            <!-- 技能展示的內容區塊 -->
             <div class="container">
                 <h3>我的技能</h3>
                 <div class="skills-grid">
+                    <!-- 使用 CSS Grid 佈局的技能卡片容器 -->
                     <div class="skill-item">
+                        <!-- 單個技能項目 -->
                         <div class="skill-icon">💻</div>
+                        <!-- 技能圖示，使用 emoji -->
                         <h4>HTML</h4>
                         <div class="skill-bar">
+                            <!-- 技能進度條的容器 -->
                             <div class="skill-progress" style="width: 70%"></div>
+                            <!-- 技能進度條，使用 inline style 設定寬度 -->
                         </div>
                         <p>基礎語法、表單、列表</p>
+                        <!-- 技能描述 -->
                     </div>
                     <div class="skill-item">
+                        <!-- 第二個技能項目 -->
                         <div class="skill-icon">🎨</div>
                         <h4>CSS</h4>
                         <div class="skill-bar">
@@ -89,6 +136,7 @@
                         <p>樣式設計、佈局、動畫</p>
                     </div>
                     <div class="skill-item">
+                        <!-- 第三個技能項目 -->
                         <div class="skill-icon">📱</div>
                         <h4>響應式設計</h4>
                         <div class="skill-bar">
@@ -100,77 +148,139 @@
             </div>
         </section>
 
-        <!-- 聯絡表單 -->
+        <!-- 聯絡表單區塊 -->
         <section class="contact-section">
+            <!-- 聯絡表單的內容區塊 -->
             <div class="container">
                 <h3>聯絡我</h3>
+                <!-- 表單標題 -->
                 <form class="contact-form" action="https://formspree.io/f/xpwnqjqk" method="POST">
+                    <!-- form 標籤：表單元素 -->
+                    <!-- action：表單提交的目標網址（Formspree 服務） -->
+                    <!-- method="POST"：使用 POST 方法提交表單資料 -->
+                    
                     <div class="form-group">
+                        <!-- 表單群組，包含標籤和輸入欄位 -->
                         <label for="name">姓名：</label>
+                        <!-- label 標籤：表單標籤，for 屬性對應 input 的 id -->
                         <input type="text" id="name" name="name" required>
+                        <!-- input 標籤：文字輸入欄位 -->
+                        <!-- type="text"：文字輸入類型 -->
+                        <!-- id 和 name：欄位識別名稱 -->
+                        <!-- required：必填欄位 -->
                     </div>
+                    
                     <div class="form-group">
                         <label for="email">Email：</label>
                         <input type="email" id="email" name="email" required>
+                        <!-- type="email"：Email 輸入類型，會自動驗證格式 -->
                     </div>
+                    
                     <div class="form-group">
                         <label for="subject">主題：</label>
                         <select id="subject" name="subject">
+                            <!-- select 標籤：下拉選單 -->
                             <option value="">請選擇主題</option>
+                            <!-- option 標籤：選單選項 -->
+                            <!-- value=""：空值，表示預設選項 -->
                             <option value="collaboration">合作機會</option>
                             <option value="question">技術問題</option>
                             <option value="feedback">意見回饋</option>
                         </select>
                     </div>
+                    
                     <div class="form-group">
                         <label for="message">訊息：</label>
                         <textarea id="message" name="message" rows="5" placeholder="請輸入您的訊息..." required></textarea>
+                        <!-- textarea 標籤：多行文字輸入區域 -->
+                        <!-- rows="5"：設定文字區域的行數 -->
+                        <!-- placeholder：提示文字，當欄位為空時顯示 -->
                     </div>
-                    <!-- 隱藏欄位，指定收件者 -->
+                    
+                    <!-- 隱藏欄位，用於 Formspree 服務設定 -->
                     <input type="hidden" name="_to" value="b1993614@gmail.com">
+                    <!-- type="hidden"：隱藏欄位，使用者看不到 -->
+                    <!-- 指定收件者信箱 -->
                     <input type="hidden" name="_subject" value="來自學生練習網站的訊息">
+                    <!-- 設定郵件主旨 -->
                     <input type="hidden" name="_cc" value="b1993614@gmail.com">
+                    <!-- 設定副本收件者 -->
+                    
                     <button type="submit" class="submit-btn">送出訊息</button>
+                    <!-- button 標籤：按鈕元素 -->
+                    <!-- type="submit"：提交按鈕，點擊會提交表單 -->
                 </form>
             </div>
         </section>
     </main>
 
-    <!-- 頁尾 -->
+    <!-- 頁尾區域 -->
     <footer class="footer">
+        <!-- footer 標籤：語義化標籤，表示網頁的頁尾 -->
         <div class="container">
             <p>&copy; 2024 小明. 版權所有.</p>
+            <!-- p 標籤：段落 -->
+            <!-- &copy;：HTML 實體，顯示版權符號 © -->
         </div>
     </footer>
 
+    <!-- JavaScript 程式碼 -->
     <script>
+        // JavaScript 程式碼區域，用於增加網頁的互動功能
+        
         // 表單提交處理
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            // document.querySelector()：選取 HTML 元素
+            // addEventListener()：為元素添加事件監聽器
+            // 'submit'：監聽表單提交事件
+            
             const submitBtn = document.querySelector('.submit-btn');
+            // const：宣告常數變數
+            // 選取提交按鈕元素
+            
             const originalText = submitBtn.textContent;
+            // 儲存按鈕的原始文字
             
             // 顯示載入狀態
             submitBtn.textContent = '正在送出...';
+            // 改變按鈕文字為載入狀態
             submitBtn.disabled = true;
+            // 禁用按鈕，防止重複提交
             
             // 如果表單提交成功，會跳轉到 Formspree 的成功頁面
             // 如果失敗，會顯示錯誤訊息
         });
         
-        // 表單驗證
+        // 表單驗證功能
         document.querySelector('.contact-form').addEventListener('input', function(e) {
+            // 'input'：監聽輸入事件，當使用者輸入時觸發
+            
             const form = e.target.closest('form');
+            // e.target：觸發事件的元素
+            // closest('form')：找到最近的 form 父元素
+            
             const submitBtn = form.querySelector('.submit-btn');
             const requiredFields = form.querySelectorAll('[required]');
+            // querySelectorAll()：選取所有符合條件的元素
+            // '[required]'：選取所有有 required 屬性的元素
+            
             let allValid = true;
+            // let：宣告變數，用於追蹤所有必填欄位是否都已填寫
             
             requiredFields.forEach(field => {
+                // forEach()：對陣列中的每個元素執行函數
+                // field => {}：箭頭函數語法
                 if (!field.value.trim()) {
+                    // field.value：取得輸入欄位的值
+                    // trim()：移除前後空白
+                    // !：邏輯非運算子
                     allValid = false;
+                    // 如果有任何必填欄位為空，設定為 false
                 }
             });
             
             submitBtn.disabled = !allValid;
+            // 根據驗證結果啟用或禁用提交按鈕
         });
     </script>
 </body>
